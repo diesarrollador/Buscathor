@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../image/cup.jpg);
+    height: 100vh;
+    background-size: cover;
+
+}
+.buscar{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background: #7C5735;
+    padding: 10px;
+    height: 60px;
+    border-radius: 40px;
+}
+.buscar-texto{
+    border: none;
+    background: none;
+    outline: none;
+    color: white;
+    font-size: 20px;
+    float: left;
+    line-height: 60px;
+    transition: .3s;
+    width: 0;
+}
+.boton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+}
+.flashit{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-style: normal;
+    padding: 3px 4px;
+    border-radius: 7px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-left: 5px;
+    background-color: red;
+    background-clip: padding-box;
+    border: 2px solid #242d4200;
+
+    animation: flash linear .5s infinite;
+
+     /* Para que no se seleccione */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select:none;
+}
+@keyframes flash{
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: .1;
+    }
+    
+    100% {
+        opacity: 1;
+    }
+}
+/* --------Responsive----------- */
+@media screen and (min-width:480px){
+    .open > .buscar-texto{
+        width: 190px;
+    }
+}
+@media screen and (min-width:768px){
+    .open > .buscar-texto{
+        width: 300px;
+    }
+}
+@media screen and (min-width:1024px){
+    .open > .buscar-texto{
+        width: 500px;
+    }
+}
